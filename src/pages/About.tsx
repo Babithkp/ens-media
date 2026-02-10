@@ -19,6 +19,16 @@ import flipkart from "@/assets/Flipkart.webp";
 import playstation from "@/assets/Playstation.jpg";
 import acer from "@/assets/Acer.jpg";
 import lenovo from "@/assets/Lenovo.png";
+import CTABanner from "@/components/CTABanner";
+
+const services = [
+  { title: "Casting", desc: "We provide professional esports casting for gaming streams, tournaments, and live events, delivering high-energy commentary that enhances gameplay, engages viewers, and elevates the broadcast experience." },
+  { title: "Emcee Services", desc: "Our professional emcees host and anchor events with energy, clarity, and audience engagement, elevating brand presence across live shows, launches, and activations." },
+  { title: "Production", desc: "We handle complete media production, from concept and planning to execution, delivering high-quality visual content tailored for digital, broadcast, and on-ground platforms." },
+  { title: "Broadcasting", desc: "We specialize in live and recorded broadcasting, covering events with seamless production, real-time streaming, and technical precision across multiple platforms." },
+  { title: "Campus Tours & Brand Activations", desc: "We design and execute college campus tours and on-ground activations for brands, creating immersive experiences that drive awareness, engagement, and recall among young audiences." },
+  { title: "Social Media Marketing", desc: "We build and manage data-driven social media strategies, producing content that increases visibility, engagement, and brand growth across all major platforms." },
+];
 
 const capabilities = [
   { icon: Film, title: "Video Production", desc: "End-to-end film and video production, from scripting and storyboarding to on-set direction and final delivery." },
@@ -127,41 +137,28 @@ const About = () => {
         </div>
       </section>
 
-      {/* Capabilities */}
       <section className="section-padding bg-secondary/30">
         <div className="max-w-7xl mx-auto">
-          <SectionHeading
-            label="Capabilities"
-            title="WHAT WE DO?"
-            description="From initial concept to final delivery, we offer a comprehensive suite of production and broadcast services."
-            align="center"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {capabilities.map((cap, i) => (
+          <SectionHeading label="What We Do" title="OUR SERVICES" align="center" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, i) => (
               <motion.div
-                key={cap.title}
+                key={service.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="glass-card p-8 group hover:border-primary/30 transition-colors duration-500"
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="glass-card p-8 text-center group hover:border-primary/30 transition-colors duration-500"
               >
-                <cap.icon className="mb-4 text-primary" size={28} strokeWidth={1.5} />
-                <h3 className="font-display text-xl text-foreground mb-2">{cap.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{cap.desc}</p>
+                <h3 className="font-display text-xl text-foreground mb-2">{service.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-
-
-      {/* Image break */}
-      <section className="relative h-[50vh] overflow-hidden">
-        <img src={project5} alt="Stage production" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-background/50" />
-      </section>
+      <CTABanner />
 
       <Footer />
     </div>

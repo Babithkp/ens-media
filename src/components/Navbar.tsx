@@ -17,9 +17,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 ">
       <div className="absolute inset-0 bg-background/90 backdrop-blur-md border-b border-border/50" />
-      <div className="relative max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 py-4">
-        <Link to="/" className="flex items-center gap-3 h-12 overflow-hidden  w-30">
-          <img src={ensLogo} alt="ENS" className="h-10 w-40 object-cover" />
+      <div className="relative max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 py-4 max-md:pl-0">
+        <Link to="/" className="flex items-center gap-3 h-12 overflow-hidden  w-30  ">
+          <img src={ensLogo} alt="ENS" className="h-10 w-40 object-cover max-md:w-[120px]" />
         </Link>
 
         {/* Desktop */}
@@ -39,7 +39,7 @@ const Navbar = () => {
           ))}
           <Link
             to="/contact"
-            className="font-body text-sm tracking-widest uppercase px-5 py-2 bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
+            className="font-body text-sm tracking-widest uppercase px-5 py-2 bg-primary text-primary-foreground hover:opacity-90 transition-opacity rounded-lg"
           >
             Start a Project
           </Link>
@@ -63,7 +63,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-background/98 z-40 flex flex-col items-center justify-center gap-8 md:hidden"
+            className="fixed inset-0 bg-background z-40 flex flex-col items-center justify-center gap-8 md:hidden"
           >
             {navLinks.map((link) => (
               <Link

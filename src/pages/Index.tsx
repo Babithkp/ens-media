@@ -33,9 +33,9 @@ const Index = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative h-screen flex items-end overflow-hidden  text-center">
+      <section className="relative  flex items-end overflow-hidden  text-center py-40">
         <div className="absolute inset-0">
-          <img src={heroBg} alt="Production studio" className="w-full h-full object-cover" />
+          <img src={heroBg} alt="Production studio" className="w-full h-full object-cover " />
           <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
           <div className="absolute inset-0 bg-background/50" />
         </div>
@@ -45,10 +45,10 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <p className="font-body text-xs tracking-[0.4em] uppercase mb-4 mr-10 block font-medium ">
+            <p className="font-body text-xs tracking-[0.4em] uppercase mb-4 mr-10 block font-medium max-md:text-[7px] max-md:m-0">
               Production <DotIcon className="inline-block size-8 text-[#F77325]" /> Media <DotIcon className="inline-block size-8 text-[#30C0E5]" /> Broadcasting
             </p>
-            <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-foreground leading-[0.9] max-w-5xl">
+            <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-foreground leading-[0.9] max-w-5xl">
               WE BRING {" "}
               <span className="text-gradient">STORIES</span> <br />TO
               THE SCREEN
@@ -60,7 +60,7 @@ const Index = () => {
             </div>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 mt-8 font-body text-sm tracking-widest uppercase text-primary hover:gap-5 transition-all duration-300"
+              className="inline-flex items-center gap-3 mt-8 font-body text-sm tracking-widest uppercase text-primary hover:gap-5 transition-all duration-300 max-md:bg-primary max-md:text-white max-md:p-3 rounded-lg"
             >
               Start a Project <ArrowRight size={16} />
             </Link>

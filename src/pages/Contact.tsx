@@ -18,7 +18,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="relative pt-32 pb-20 section-padding text-center">
+      <section className="relative pt-32 pb-20 section-padding text-center max-md:my-40">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -85,7 +85,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="inline-flex items-center gap-3 font-body text-sm tracking-widest uppercase px-8 py-4 bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-3 font-body text-sm tracking-widest uppercase px-8 py-4 bg-primary text-primary-foreground hover:opacity-90 transition-opacity rounded-lg"
             >
               Send Message <Send size={16} />
             </button>
@@ -123,15 +123,6 @@ const Contact = () => {
                     <span className="text-foreground text-sm">1234 Sunset Blvd, Suite 500<br />Los Angeles, CA 90028</span>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="glass-card p-8 mt-8">
-              <h4 className="font-display text-xl text-foreground mb-3">WORKING HOURS</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <p>Monday – Friday: 9:00 AM – 6:00 PM</p>
-                <p>Saturday: By appointment</p>
-                <p>Sunday: Closed</p>
               </div>
             </div>
           </motion.div>
