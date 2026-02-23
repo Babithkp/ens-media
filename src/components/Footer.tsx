@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import ensLogo from "@/assets/ens.png";
+import ensLogo from "@/assets/ens.jpeg";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border/30 bg-background">
+    <footer className="border-t border-border/30 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <img src={ensLogo} alt="ENS" className="h-10 w-auto mb-4" />
+            <img src={ensLogo} alt="ENS" className="h-20 w-80 mb-4 object-cover -translate-x-20 max-md:w-40 max-md:-translate-x-10" />
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               A creative media studio specializing in video production, live broadcasting, and digital content.
             </p>
