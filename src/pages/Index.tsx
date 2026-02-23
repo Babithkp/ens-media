@@ -162,7 +162,7 @@ const Index = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="py-5 px-3 flex items-center justify-center rounded-lg max-md:py-2 max-md:px-2"
+                className="py-5 px-3 flex items-center justify-center max-md:py-2 max-md:px-2"
               >
                 <img
                   src={client}
@@ -178,7 +178,7 @@ const Index = () => {
       {/* Featured Work */}
       <section className="section-padding max-w-7xl mx-auto">
         <SectionHeading label="Featured Work" title="SELECTED PROJECTS" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-md:mt-5">
           {projects.map((project, i) => (
             <motion.div
               key={project.title}
