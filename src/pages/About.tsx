@@ -94,7 +94,7 @@ const About = () => {
                 transition={{ duration: 0.4, delay: i * 0.05 }}
                 className=" py-5 px-3 flex items-center justify-center max-md:py-2 max-md:px-2"
               >
-                <img src={client} alt="Behind the scenes" className="w-full h-40 object-cover rounded-lg" />
+                <img src={client} alt="Behind the scenes" className="w-full h-40  rounded-lg" />
 
               </motion.div>
             ))}

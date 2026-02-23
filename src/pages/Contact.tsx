@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Send, MapPin, Mail, Phone } from "lucide-react";
+import { useState } from "react";import { motion } from "framer-motion";
+import { Send, MapPin, Mail, Phone, Instagram } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { toast } from "sonner";
+import instalogo from "@/assets/Instagram_logo.webp";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -25,14 +25,18 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="font-body text-xs tracking-[0.4em] uppercase text-primary mb-4 block">Contact</span>
+            <span className="font-body text-xs tracking-[0.4em] uppercase text-primary mb-4 block">
+              Contact
+            </span>
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-foreground leading-[0.9] ">
-              LET'S <span className="text-gradient">WORK</span><br />
+              LET'S <span className="text-gradient">WORK</span>
+              <br />
               TOGETHER
             </h1>
             <div className="flex justify-center items-center">
               <p className="mt-6 text-muted-foreground text-base md:text-lg max-w-lg leading-relaxed">
-                Have a project in mind? We'd love to hear about it. Reach out and let's create something extraordinary.
+                Have a project in mind? We'd love to hear about it. Reach out
+                and let's create something extraordinary.
               </p>
             </div>
           </motion.div>
@@ -40,6 +44,9 @@ const Contact = () => {
       </section>
 
       <section className="section-padding pt-0">
+        <div>
+          <Instagram className="text-primary mt-1 shrink-0" size={50} />
+        </div>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Form */}
           <motion.form
@@ -51,7 +58,9 @@ const Contact = () => {
             className="space-y-6"
           >
             <div>
-              <label className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-2 block">Name</label>
+              <label className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-2 block">
+                Name
+              </label>
               <input
                 type="text"
                 required
@@ -62,7 +71,9 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-2 block">Email</label>
+              <label className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-2 block">
+                Email
+              </label>
               <input
                 type="email"
                 required
@@ -73,7 +84,9 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-2 block">Message</label>
+              <label className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-2 block">
+                Message
+              </label>
               <textarea
                 required
                 rows={6}
@@ -100,27 +113,43 @@ const Contact = () => {
             className="space-y-8 lg:pl-16"
           >
             <div>
-              <h3 className="font-display text-2xl text-foreground mb-6">CONTACT INFO</h3>
+              <h3 className="font-display text-2xl text-foreground mb-6">
+                CONTACT INFO
+              </h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <Mail className="text-primary mt-1 shrink-0" size={18} />
                   <div>
-                    <span className="text-xs tracking-widest uppercase text-muted-foreground block mb-1">Email</span>
-                    <span className="text-foreground text-sm">hello@ensmedia.studio</span>
+                    <span className="text-xs tracking-widest uppercase text-muted-foreground block mb-1">
+                      Email
+                    </span>
+                    <span className="text-foreground text-sm">
+                      hello@ensmedia.studio
+                    </span>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <Phone className="text-primary mt-1 shrink-0" size={18} />
                   <div>
-                    <span className="text-xs tracking-widest uppercase text-muted-foreground block mb-1">Phone</span>
-                    <span className="text-foreground text-sm">+1 (555) 234-5678</span>
+                    <span className="text-xs tracking-widest uppercase text-muted-foreground block mb-1">
+                      Phone
+                    </span>
+                    <span className="text-foreground text-sm">
+                      +1 (555) 234-5678
+                    </span>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <MapPin className="text-primary mt-1 shrink-0" size={18} />
                   <div>
-                    <span className="text-xs tracking-widest uppercase text-muted-foreground block mb-1">Location</span>
-                    <span className="text-foreground text-sm">1234 Sunset Blvd, Suite 500<br />Los Angeles, CA 90028</span>
+                    <span className="text-xs tracking-widest uppercase text-muted-foreground block mb-1">
+                      Location
+                    </span>
+                    <span className="text-foreground text-sm">
+                      1234 Sunset Blvd, Suite 500
+                      <br />
+                      Los Angeles, CA 90028
+                    </span>
                   </div>
                 </div>
               </div>
