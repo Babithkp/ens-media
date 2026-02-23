@@ -25,9 +25,9 @@ const Footer = () => {
           <div>
             <h4 className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-4">Get in Touch</h4>
             <div className="flex flex-col gap-3 text-sm text-foreground/70">
-              <span>hello@ensmedia.studio</span>
-              <span>+1 (555) 234-5678</span>
-              <span>Los Angeles, CA</span>
+              <a href="mailto:Contact@ensproductions.com">Contact@ensproductions.com</a>
+              <span>+91 81029 84360</span>
+              <span>Bangalore, India</span>
             </div>
           </div>
         </div>

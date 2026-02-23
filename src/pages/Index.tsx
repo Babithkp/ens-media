@@ -26,6 +26,12 @@ import flipkart from "@/assets/Flipkart.webp";
 import playstation from "@/assets/Playstation.jpg";
 import acer from "@/assets/Acer.jpg";
 import lenovo from "@/assets/Lenovo.png";
+import comic_con from "@/assets/comic_con.jpg";
+import amd from "@/assets/amd.webp";
+import iitdelhi from "@/assets/iit-delhi.png"
+import iitkharagpur from "@/assets/iit-kharagpur.png"
+import nitcalicut from "@/assets/iit-calicut.webp"
+
 
 const clients = [
   entity,
@@ -41,6 +47,11 @@ const clients = [
   playstation,
   acer,
   lenovo,
+  comic_con,
+  amd,
+  iitdelhi,
+  iitkharagpur,
+  nitcalicut
 ];
 
 const projects = [

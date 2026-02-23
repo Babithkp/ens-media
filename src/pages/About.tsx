@@ -20,6 +20,12 @@ import playstation from "@/assets/Playstation.jpg";
 import acer from "@/assets/Acer.jpg";
 import lenovo from "@/assets/Lenovo.png";
 import CTABanner from "@/components/CTABanner";
+import comic_con from "@/assets/comic_con.jpg";
+import amd from "@/assets/amd.webp";
+import iitdelhi from "@/assets/iit-delhi.png"
+import iitkharagpur from "@/assets/iit-kharagpur.png"
+import nitcalicut from "@/assets/iit-calicut.webp"
+
 
 const services = [
   { title: "Casting", desc: "We provide professional esports casting for gaming streams, tournaments, and live events, delivering high-energy commentary that enhances gameplay, engages viewers, and elevates the broadcast experience." },
@@ -40,7 +46,7 @@ const capabilities = [
 ];
 
 const clients = [
-  entity, garena, intel, alienware, krafton, samsung, oneplus, riot, iqoo, flipkart, playstation, acer, lenovo
+  entity, garena, intel, alienware, krafton, samsung, oneplus, riot, iqoo, flipkart, playstation, acer, lenovo,comic_con,amd,iitdelhi,iitkharagpur,nitcalicut
 ];
 
 const About = () => {
