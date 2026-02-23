@@ -86,9 +86,9 @@ const About = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="glass-card py-5 px-3 flex items-center justify-center"
+                className=" py-5 px-3 flex items-center justify-center"
               >
-                <img src={client} alt="Behind the scenes" className="w-full h-20 object-cover" />
+                <img src={client} alt="Behind the scenes" className="w-full h-40 object-cover rounded-lg" />
 
               </motion.div>
             ))}

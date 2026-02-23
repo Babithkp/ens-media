@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import ensLogo from "@/assets/ens.png";
+import ensLogo from "@/assets/ens.jpeg";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -16,10 +16,10 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 ">
-      <div className="absolute inset-0 bg-background/90 backdrop-blur-md border-b border-border/50" />
+      <div className="absolute inset-0 bg-white backdrop-blur-md border-b border-border/50" />
       <div className="relative max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 py-4 max-md:pl-0">
-        <Link to="/" className="flex items-center gap-3 h-12 overflow-hidden  w-30  ">
-          <img src={ensLogo} alt="ENS" className="h-10 w-40 object-cover max-md:w-[120px]" />
+        <Link to="/" className="flex items-center gap-3 h-20 overflow-hidden  w-30  max-md:h-14">
+          <img src={ensLogo} alt="ENS" className="aspect-square w-80 object-cover max-md:w-60 max-md:-translate-x-10" /> 
         </Link>
 
         {/* Desktop */}
