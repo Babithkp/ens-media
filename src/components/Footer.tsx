@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";import ensLogo from "@/assets/ens.jpeg";
-import { Mail, MapPin, Phone } from "lucide-react";
-
+import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="border-t border-border/30 bg-white">
@@ -73,17 +73,33 @@ const Footer = () => {
           <div className="flex gap-6">
             <a
               href="https://www.instagram.com/ens.productionss?igsh=MWJ0Z3NxZWN0YjRrbQ=="
-              className="text-xs text-muted-foreground hover:text-foreground cursor-pointer transition-colors"
               target="_blank"
+              className="flex items-center gap-3"
             >
-              Instagram
+              <Instagram size={20} className=" shrink-0" />
+              <p className="text-xs text-muted-foreground hover:text-foreground cursor-pointer transition-colors">
+                Instagram
+              </p>
             </a>
             <a
-              className="text-xs text-muted-foreground hover:text-foreground cursor-pointer transition-colors"
+              href="https://api.whatsapp.com/send/?phone=918102984360&text&type=phone_number&app_absent=0"
+              className="flex items-center gap-3"
               target="_blank"
             >
-              LinkedIn
+              <FaWhatsapp size={20} className=" shrink-0" />
+              <p className="text-xs text-muted-foreground hover:text-foreground cursor-pointer transition-colors">
+                Whatsapp
+              </p>
             </a>
+            <div className="flex items-center gap-3">
+              <Linkedin size={20} className=" shrink-0" />
+              <a
+                className="text-xs text-muted-foreground hover:text-foreground cursor-pointer transition-colors"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </div>
