@@ -172,7 +172,7 @@ export default function Projects() {
   return (
     <section className="section-padding max-w-7xl mx-auto">
       <SectionHeading label="Featured Work" title="SELECTED PROJECTS" />
-      <div className="grid grid-cols-1  lg:grid-cols-2 gap-4 max-md:mt-5">
+      <div className="grid grid-cols-1  lg:grid-cols-2 gap-4 max-md:gap-20 max-md:mt-5">
         {projects.map((project, i) => (
           <motion.div
             key={project.title}
@@ -182,6 +182,16 @@ export default function Projects() {
             transition={{ duration: 0.6, delay: i * 0.1 }}
             className="group  aspect-square  cursor-pointer"
           >
+            
+            <div className=" inset-0 bg-background/70  duration-500 flex flex-col justify-end py-6 gap-2">
+              <span className="font-display text-2xl text-foreground mt-1">
+                {project.title}
+              </span>
+              <span className="text-xs ">
+                {highlightsbrands(
+                  project.description)}
+              </span>
+            </div>
             <Carousel
               className="w-full max-w-xl mx-auto"
               opts={{ loop: true }}
@@ -207,15 +217,6 @@ export default function Projects() {
                 ))}
               </CarouselContent>
             </Carousel>
-            <div className=" inset-0 bg-background/70  duration-500 flex flex-col justify-end py-6 gap-2">
-              <span className="font-display text-2xl text-foreground mt-1">
-                {project.title}
-              </span>
-              <span className="text-xs ">
-                {highlightsbrands(
-                  project.description)}
-              </span>
-            </div>
           </motion.div>
         ))}
       </div>
