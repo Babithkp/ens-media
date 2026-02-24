@@ -29,9 +29,17 @@ import p2 from "@/assets/ens/p2.jpeg";
 import p3 from "@/assets/ens/p3.jpeg";
 import p4 from "@/assets/ens/p4.jpeg";
 
-import h1 from "@/assets/ens/h1.jpeg";
+import h1 from "@/assets/ens/comic.jpeg";
 import h2 from "@/assets/ens/h2.jpeg";
 import h3 from "@/assets/ens/h3.jpeg";
+import h4 from "@/assets/ens/iitdehli2.JPG.jpeg"; 
+import h5 from "@/assets/ens/intel.jpeg";
+import h6 from "@/assets/ens/kct.jpeg"; 
+import h7 from "@/assets/ens/lenova.JPG.jpeg";  
+import h8 from "@/assets/ens/lol.jpeg";  
+import h9 from "@/assets/ens/playstation.jpeg";   
+import h10 from "@/assets/ens/lenovatechworld.jpeg";    
+
 
 import c1 from "@/assets/ens/c1.jpeg";
 import c2 from "@/assets/ens/c2.jpeg";
@@ -86,12 +94,20 @@ const projects = [
   },
   {
     img: project3,
-    title: "Emcee / Host Services",
+    title: "Emcee / Hosting",
     description:
       "We offer professional emcee and hosting services with commanding stage presence and strong audience engagement. We have worked with PlayStation and Lenovo, hosting major events including Comic Con India and large-scale brand launches.",
     images: [
-      { img: h2, title: "University event MIT WPU" },
+      { img: h1, title: "Comicon" },  
+      { img: h2, title: "University event MIT WPU" }, 
       { img: h3, title: "Free Fire domain expansion" },
+      { img: h4, title: "IIT Dehli fest" }, 
+      { img: h5, title: "Comicon" }, 
+      { img: h6, title: "KCT" },  
+      { img: h7, title: "Lenovo Yoga" },   
+      { img: h8, title: "LOL World Cup" },   
+      { img: h9, title: "Playstation" },   
+      { img: h10, title: "Lenova tech world" },
     ],
   },
   {
@@ -163,10 +179,11 @@ const highlightsbrands = (text: string) => {
         </span>
       );
     }
-
     return part;
   });
 };
+
+
 export default function Projects() {
   return (
     <section className="section-padding max-w-7xl mx-auto ">
@@ -198,7 +215,7 @@ export default function Projects() {
                       alt={src.title}
                       className="w-full h-[320px] object-cover"
                     />
-                    <p className="capitalize text-sm">{src.title}</p>
+                    <p className="capitalize text-sm text-center">{src.title}</p>
                   </CarouselItem>
                 ))}
               </CarouselContent>
@@ -208,7 +225,6 @@ export default function Projects() {
               <span className="font-display text-2xl text-foreground">
                 {project.title}
               </span>
-
               <span className="text-xs text-muted-foreground">
                 {highlightsbrands(project.description)}
               </span>

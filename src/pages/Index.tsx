@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";import { Link } from "react-router-dom";
 import { ArrowRight, DotIcon } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -32,6 +31,7 @@ import nitcalicut from "@/assets/iit-calicut.webp";
 
 import Projects from "@/components/Projects";
 import Metrics from "@/components/Metrics";
+import Whoweare from "@/components/Whoweare";
 
 const clients = [
   entity,
@@ -128,10 +128,6 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="w-full flex justify-center ">
-        
-      </section>
-
       <Metrics />
 
       {/* Clients */}
@@ -178,8 +174,8 @@ const Index = () => {
           >
             <SectionHeading
               label="Who We Are"
-              title="CRAFTED WITH VISION"
-              description="ENS is a creative media studio driven by a passion for visual storytelling. We combine technical precision with artistic vision to produce content that captivates and inspires."
+              title="Live Without Limits"
+              description="ENS is where production meets performance. We design and execute live experiences, broadcast major events, power brand activations, and create digital impact with precision and creativity."
             />
             <Link
               to="/about"
@@ -193,14 +189,10 @@ const Index = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative aspect-[4/3] overflow-hidden"
+            className="relative  overflow-hidden"
           >
-            <img
-              src={project6}
-              alt="Studio"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 border border-primary/20" />
+            <Whoweare />
+            <div className="absolute" />
           </motion.div>
         </div>
       </section>

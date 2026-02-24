@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";import { Film, Radio, Tv, Camera, Clapperboard, Palette } from "lucide-react";
+import { motion } from "framer-motion";
+import { Film, Radio, Tv, Camera, Clapperboard, Palette } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionHeading from "@/components/SectionHeading";
@@ -27,6 +28,35 @@ import nitcalicut from "@/assets/iit-calicut.webp";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import Metrics from "@/components/Metrics";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import pb1 from "@/assets/ens/pb1.jpeg";
+import b7 from "@/assets/ens/b7.jpeg";
+import c6 from "@/assets/ens/c6.jpeg";
+import h4 from "@/assets/ens/iitdehli2.JPG.jpeg"; 
+import Autoplay from "embla-carousel-autoplay";
+
+const works = [
+  {
+    img: pb1,
+    title: "Live Production",
+  },
+  {
+    img: b7,
+    title: "Live Broadcasting",
+  },
+  {
+    img: c6,
+    title: "Brand Activation",
+  },
+  {
+    img: h4,
+    title: "EMCEE / Hosting",
+  },
+];
 
 const services = [
   {
@@ -148,12 +178,30 @@ const About = () => {
             transition={{ duration: 0.7 }}
           >
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img
-                src={project1}
-                alt="Behind the scenes"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 border border-primary/20" />
+              <Carousel
+                opts={{ loop: true }}
+                plugins={[
+                  Autoplay({
+                    delay: 3000,
+                    stopOnInteraction: false,
+                  }),
+                ]}
+              >
+                <CarouselContent>
+                  {works.map((src, index) => (
+                    <CarouselItem key={index}>
+                      <img
+                        src={src.img}
+                        alt={src.title}
+                        className="w-90 h-[90%] object-center"
+                      />
+                      <p className="capitalize text-sm text-center">
+                        {src.title}
+                      </p>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
             </div>
           </motion.div>
           <motion.div
@@ -165,21 +213,23 @@ const About = () => {
             <SectionHeading label="Our Story" title="WHO WE ARE?" />
             <div className="space-y-4 text-muted-foreground text-sm md:text-base leading-relaxed">
               <p>
-                ENS Media is a full-service media production company based in
-                Los Angeles. We specialize in creating cinematic content that
-                moves audiences — from brand campaigns and documentaries to live
-                broadcasts and corporate media.
+                ENS Media, Productions & Broadcasting is a full-service media
+                production company specializing in live production, live
+                broadcasting, brand activations, campus tours, and social media
+                marketing across India.
               </p>
               <p>
-                Our approach is rooted in collaboration, creative integrity, and
-                technical excellence. Every project begins with understanding
-                the story our clients want to tell, and we bring the expertise,
-                equipment, and artistry to bring that story to life.
+                We work with leading brands, institutions, and event partners to
+                deliver professionally managed events, high-definition broadcast
+                solutions, and strategic on-ground campaigns. Our expertise
+                spans corporate events, eSports tournaments, smartphone
+                launches, and large-scale campus engagements.
               </p>
               <p>
-                With a team of experienced producers, directors,
-                cinematographers, and editors, we deliver broadcast-quality
-                content that meets the highest industry standards.
+                With a strong focus on technical precision, structured
+                execution, and audience engagement, ENS ensures every project is
+                delivered seamlessly, from concept development to final
+                execution.
               </p>
             </div>
           </motion.div>

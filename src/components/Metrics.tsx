@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-
-const ratesDetails = [  {
+const ratesDetails = [
+  {
     title: "Successful projects",
     metrics: "250+",
   },
@@ -23,13 +23,19 @@ export default function Metrics() {
         className="w-[90%] flex flex-col items-center justify-center"
       >
         <div>
-        <p className="text-5xl text-cen font-medium font-display bg-gradient-to-r from-[#3C248E] via-[#F77325] to-[#30C0E5] bg-clip-text text-transparent max-md:text-center">
-          Broadcasting Excellence & Producing Impact.
-        </p>
+          <p className="text-5xl text-center font-medium font-display bg-gradient-to-r from-[#3C248E] via-[#F77325] to-[#30C0E5] bg-clip-text text-transparent max-lg:hidden">
+            Broadcasting Excellence & Producing Impact.
+          </p>
+          <p className="text-4xl text-center font-medium font-display bg-gradient-to-r from-[#3C248E] via-[#F77325] to-[#30C0E5] bg-clip-text text-transparent lg:hidden">
+            Broadcasting Excellence<br/> &<br/> Producing Impact.
+          </p>
         </div>
         <div className="flex justify-evenly max-md:flex-wrap max-md:gap-5 mt-20 w-full">
           {ratesDetails.map((rate, i) => (
-            <div className="bg-white  rounded-lg border w-60 h-32 grid place-content-center" key={i}>
+            <div
+              className="bg-white  rounded-lg border w-60 h-32 grid place-content-center"
+              key={i}
+            >
               <h3 className="text-center text-4xl font-bold ">
                 {rate.metrics}
               </h3>
