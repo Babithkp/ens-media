@@ -141,16 +141,15 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+
       <section className="w-full flex justify-center ">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          <p className="text-5xl font-medium font-display max-md:text-center" >
-            <span className="text-[#3C248E]">Broadcasting Excellence</span>{" "}
-            <span className="text-[#F77325]">&</span>{" "}
-            <span className="text-[#30C0E5]">Producing Impact.</span>
+          <p className="text-5xl font-medium font-display bg-gradient-to-r from-[#3C248E] via-[#F77325] to-[#30C0E5] bg-clip-text text-transparent max-md:text-center">
+            Broadcasting Excellence & Producing Impact.
           </p>
         </motion.div>
       </section>
@@ -158,7 +157,9 @@ const Index = () => {
         <div className="flex justify-evenly w-[90%] max-md:flex-wrap max-md:gap-5">
           {ratesDetails.map((rate, i) => (
             <div className="" key={i}>
-              <h3 className="text-center text-4xl font-bold ">{rate.metrics}</h3>
+              <h3 className="text-center text-4xl font-bold ">
+                {rate.metrics}
+              </h3>
               <p className="text-center text-lg">{rate.title}</p>
             </div>
           ))}

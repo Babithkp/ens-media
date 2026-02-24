@@ -58,6 +58,12 @@ const projects = [
       { img: p2, title: "P2" },
       { img: p3, title: "P3" },
       { img: p4, title: "P4" },
+      { img: pb1, title: "PB1" },
+      { img: pb2, title: "PB2" },
+      { img: pb3, title: "PB3" },
+      { img: pb4, title: "PB4" },
+      { img: pb5, title: "PB5" },
+      { img: pb6, title: "PB6" },
     ],
   },
   {
@@ -104,20 +110,6 @@ const projects = [
       { img: c4, title: "c4" },
       { img: c5, title: "c5" },
       { img: c6, title: "c6" },
-    ],
-  },
-  {
-    img: project3,
-    title: "Social Media Management",
-    description:
-      "We provide strategic social media marketing, content creation, and digital campaign management for brands including Entity, helping businesses strengthen online presence, increase engagement, and drive measurable digital growth.",
-    images: [
-      { img: pb1, title: "PB1" },
-      { img: pb2, title: "PB2" },
-      { img: pb3, title: "PB3" },
-      { img: pb4, title: "PB4" },
-      { img: pb5, title: "PB5" },
-      { img: pb6, title: "PB6" },
     ],
   },
 ];

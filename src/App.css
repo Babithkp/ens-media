@@ -48,3 +48,18 @@ body {
 .read-the-docs {
   color: #888;
 }
+
+.text-new {
+  background: linear-gradient(
+    90deg,
+    #3C248E 0%,
+    #F77325 80%,
+    #30C0E5 90%
+  );
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;   /* ✅ REQUIRED */
+  background-clip: text;           /* ✅ fallback */
+
+  -webkit-text-fill-color: transparent; /* ✅ better than text-fill */
+}

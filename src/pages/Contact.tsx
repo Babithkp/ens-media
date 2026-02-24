@@ -22,7 +22,7 @@ const Contact = () => {
     e.preventDefault();
     const formDataWithKey = {
       ...form,
-      access_key: "c70ae29d-0e7a-4698-a790-f8189613bf96",
+      access_key: "92668cd6-bbc2-4d2c-a61b-111cbd23957f",
     };
     setIsLoading(true);
 
@@ -78,6 +78,24 @@ const Contact = () => {
             </div>
           </motion.div>
         </div>
+      </section>
+      <section className="flex justify-center items-center gap-10 max-md:justify-evenly px-8">
+        <a href="/" className="flex items-center gap-3 max-md:w-1/2">
+          <img
+            src={instalogo}
+            alt="Instagram"
+            className="size-10 object-cover"
+          />
+          <p className="font-medium">DM us on Instagram</p>
+        </a>
+        <a href="/" className="flex items-center gap-3 max-md:w-1/2">
+          <img
+            src={whatsapp}
+            alt="Whatsapp"
+            className="size-10 object-cover rounded-2xl"
+          />
+          <p className="font-medium">Message in Whatsapp</p>
+        </a>
       </section>
 
       <section className="section-padding pt-0">
@@ -158,22 +176,6 @@ const Contact = () => {
                 CONTACT INFO
               </h3>
               <div className="space-y-6">
-              <a href="/" className="flex items-center gap-3">
-              <img
-                src={instalogo}
-                alt="Instagram"
-                className="size-10 object-cover"
-              />
-              <p className="font-medium">DM us on Instagram</p>
-            </a>
-            <a href="/" className="flex items-center gap-3">
-              <img
-                src={whatsapp}
-                alt="Whatsapp"
-                className="size-10 object-cover rounded-2xl"
-                />
-                <p className="font-medium">Message in Whatsapp</p>
-            </a>
                 <div className="flex items-start gap-4">
                   <Mail className="text-primary mt-1 shrink-0" size={18} />
                   <div>
