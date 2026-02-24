@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";import ensLogo from "@/assets/ens.jpeg";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -47,11 +48,20 @@ const Footer = () => {
               Get in Touch
             </h4>
             <div className="flex flex-col gap-3 text-sm text-foreground/70">
-              <a href="mailto:contact@ensproductions.com">
-                contact@ensproductions.com
-              </a>
-              <span>+91 81029 84360</span>
-              <span>Bangalore, India</span>
+              <div className="flex items-center gap-3">
+                <Mail className=" mt-1 shrink-0" size={18} />
+                <a href="mailto:contact@ensproductions.com">
+                  contact@ensproductions.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className=" mt-1 shrink-0" size={18} />
+                <span>+91 81029 84360</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin className=" mt-1 shrink-0" size={18} />
+                <span>Bangalore, India</span>
+              </div>
             </div>
           </div>
         </div>
@@ -68,7 +78,8 @@ const Footer = () => {
             >
               Instagram
             </a>
-            <a className="text-xs text-muted-foreground hover:text-foreground cursor-pointer transition-colors"
+            <a
+              className="text-xs text-muted-foreground hover:text-foreground cursor-pointer transition-colors"
               target="_blank"
             >
               LinkedIn

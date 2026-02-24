@@ -98,7 +98,7 @@ const Contact = () => {
             alt="Whatsapp"
             className="size-10 object-cover rounded-2xl"
           />
-          <p className="font-medium">Message in Whatsapp</p>
+          <p className="font-medium">Message on Whatsapp</p>
         </a>
       </section>
 

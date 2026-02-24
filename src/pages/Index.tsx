@@ -4,10 +4,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionHeading from "@/components/SectionHeading";
 import heroBg from "@/assets/hero-bg.jpeg";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project6 from "@/assets/project-6.jpg";
 import CTABanner from "@/components/CTABanner";
 
 import entity from "@/assets/entity.jpg";
@@ -32,6 +28,7 @@ import nitcalicut from "@/assets/iit-calicut.webp";
 import Projects from "@/components/Projects";
 import Metrics from "@/components/Metrics";
 import Whoweare from "@/components/Whoweare";
+import Services from "@/components/Services";
 
 const clients = [
   entity,
@@ -54,28 +51,6 @@ const clients = [
   amd,
 ];
 
-const services = [
-  {
-    title: "Live Production",
-    desc: "We deliver end-to-end live production for concerts, large-scale shows, smartphone launches, and corporate events. Our portfolio includes production support for smartphone launch events by iQOO and Samsung, ensuring seamless execution, technical precision, and impactful audience experiences.",
-    img: project2,
-  },
-  {
-    title: "Live Broadcasting",
-    desc: "We provide high-definition, real-time live broadcasting across digital platforms for sports, eSports, and institutional productions. Our brand partnerships include Intel, Flipkart, Lenovo, AMD, and Entity, with event coverage for Acer Predator League, iQOO India League, PUBG Mobile tournaments, cricket broadcasts, and productions at IIT Delhi and NIT Calicut.",
-    img: project3,
-  },
-  {
-    title: "Emcee / Host Services",
-    desc: "We offer professional emcee and hosting services with commanding stage presence and strong audience engagement. We have worked with PlayStation and Lenovo, hosting major events including Comic Con India and large-scale brand launches.",
-    img: project1,
-  },
-  {
-    title: "Campus Tours & Brand Activations",
-    desc: "We execute nationwide campus tours and immersive brand activations that drive on-ground engagement. Our collaborations include Krafton, PlayStation, Riot Games, and Smaaash across institutions such as IITs, NITs, and NSUT.",
-    img: project3,
-  },
-];
 
 const Index = () => {
   return (
@@ -198,47 +173,7 @@ const Index = () => {
       </section>
 
       {/* Services */}
-      <section className="section-padding bg-secondary/30">
-        <div className="max-w-7xl mx-auto">
-          <SectionHeading
-            label="What We Do"
-            title="OUR SERVICES"
-            align="center"
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-md:mt-5">
-            {services.map((service, i) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="glass-card p-8 text-center group relative overflow-hidden hover:border-primary/30 transition-colors duration-500 rounded-2xl"
-              >
-                {/* Background Image */}
-                <img
-                  src={service.img}
-                  alt={service.title}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-
-                {/* Optional Dark Overlay */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-500" />
-
-                {/* Content */}
-                <div className="relative z-10">
-                  <h3 className="font-display text-xl text-white mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    {service.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Services/>
 
       <CTABanner />
 

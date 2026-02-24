@@ -25,8 +25,7 @@ import amd from "@/assets/amd.webp";
 import iitdelhi from "@/assets/iit-delhi.png";
 import iitkharagpur from "@/assets/iit-kharagpur.png";
 import nitcalicut from "@/assets/iit-calicut.webp";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+
 import Metrics from "@/components/Metrics";
 import {
   Carousel,
@@ -38,6 +37,7 @@ import b7 from "@/assets/ens/b7.jpeg";
 import c6 from "@/assets/ens/c6.jpeg";
 import h4 from "@/assets/ens/iitdehli2.JPG.jpeg"; 
 import Autoplay from "embla-carousel-autoplay";
+import Services from "@/components/Services";
 
 const works = [
   {
@@ -58,28 +58,7 @@ const works = [
   },
 ];
 
-const services = [
-  {
-    title: "Live Production",
-    desc: "We deliver end-to-end live production for concerts, large-scale shows, smartphone launches, and corporate events. Our portfolio includes production support for smartphone launch events by iQOO and Samsung, ensuring seamless execution, technical precision, and impactful audience experiences.",
-    img: project2,
-  },
-  {
-    title: "Live Broadcasting",
-    desc: "We provide high-definition, real-time live broadcasting across digital platforms for sports, eSports, and institutional productions. Our brand partnerships include Intel, Flipkart, Lenovo, AMD, and Entity, with event coverage for Acer Predator League, iQOO India League, PUBG Mobile tournaments, cricket broadcasts, and productions at IIT Delhi and NIT Calicut.",
-    img: project3,
-  },
-  {
-    title: "Emcee / Host Services",
-    desc: "We offer professional emcee and hosting services with commanding stage presence and strong audience engagement. We have worked with PlayStation and Lenovo, hosting major events including Comic Con India and large-scale brand launches.",
-    img: project1,
-  },
-  {
-    title: "Campus Tours & Brand Activations",
-    desc: "We execute nationwide campus tours and immersive brand activations that drive on-ground engagement. Our collaborations include Krafton, PlayStation, Riot Games, and Smaaash across institutions such as IITs, NITs, and NSUT.",
-    img: project3,
-  },
-];
+
 
 const clients = [
   entity,
@@ -193,7 +172,7 @@ const About = () => {
                       <img
                         src={src.img}
                         alt={src.title}
-                        className="w-90 h-[90%] object-center"
+                        className="w-full h-96 max-md:h-60 object-center"
                       />
                       <p className="capitalize text-sm text-center">
                         {src.title}
@@ -237,47 +216,7 @@ const About = () => {
       </section>
 
       {/* Services */}
-      <section className="section-padding bg-secondary/30">
-        <div className="max-w-7xl mx-auto">
-          <SectionHeading
-            label="What We Do"
-            title="OUR SERVICES"
-            align="center"
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-md:mt-5">
-            {services.map((service, i) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="glass-card p-8 text-center group relative overflow-hidden hover:border-primary/30 transition-colors duration-500 rounded-2xl"
-              >
-                {/* Background Image */}
-                <img
-                  src={service.img}
-                  alt={service.title}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-
-                {/* Optional Dark Overlay */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-500" />
-
-                {/* Content */}
-                <div className="relative z-10">
-                  <h3 className="font-display text-xl text-white mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    {service.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Services/>
 
       <CTABanner />
 
