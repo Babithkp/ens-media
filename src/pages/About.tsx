@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { Film, Radio, Tv, Camera, Clapperboard, Palette } from "lucide-react";
+import { motion } from "framer-motion";import { Film, Radio, Tv, Camera, Clapperboard, Palette } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionHeading from "@/components/SectionHeading";
@@ -22,9 +21,9 @@ import lenovo from "@/assets/Lenovo.png";
 import CTABanner from "@/components/CTABanner";
 import comic_con from "@/assets/comic_con.jpg";
 import amd from "@/assets/amd.webp";
-import iitdelhi from "@/assets/iit-delhi.png"
-import iitkharagpur from "@/assets/iit-kharagpur.png"
-import nitcalicut from "@/assets/iit-calicut.webp"
+import iitdelhi from "@/assets/iit-delhi.png";
+import iitkharagpur from "@/assets/iit-kharagpur.png";
+import nitcalicut from "@/assets/iit-calicut.webp";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import Metrics from "@/components/Metrics";
@@ -52,9 +51,25 @@ const services = [
   },
 ];
 
-
 const clients = [
-  entity, garena, intel, alienware, krafton, samsung, oneplus, riot, iqoo, flipkart, playstation, acer, lenovo,comic_con,amd,iitdelhi,iitkharagpur,nitcalicut
+  entity,
+  intel,
+  garena,
+  krafton,
+  iitkharagpur,
+  iitdelhi,
+  oneplus,
+  riot,
+  alienware,
+  iqoo,
+  playstation,
+  samsung,
+  acer,
+  flipkart,
+  nitcalicut,
+  lenovo,
+  comic_con,
+  amd,
 ];
 
 const About = () => {
@@ -63,8 +78,15 @@ const About = () => {
       <Navbar />
       <section className="relative h-screen flex items-center overflow-hidden text-center">
         <div className="absolute inset-0">
-          <img src={heroBg} alt="Production studio" className="w-full h-full object-cover" />
-          <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
+          <img
+            src={heroBg}
+            alt="Production studio"
+            className="w-full h-full object-cover"
+          />
+          <div
+            className="absolute inset-0"
+            style={{ background: "var(--gradient-hero)" }}
+          />
           <div className="absolute inset-0 bg-background/50" />
         </div>
         <div className="relative z-10 section-padding md:pb-32 w-full max-w-7xl mx-auto ">
@@ -73,7 +95,9 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <span className="font-body text-xs tracking-[0.4em] uppercase text-primary mb-4 block">About Us</span>
+            <span className="font-body text-xs tracking-[0.4em] uppercase text-primary mb-4 block">
+              About Us
+            </span>
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-foreground leading-[0.9] ">
               BUILT ON <span className="text-gradient">CRAFT</span>,<br />
               DRIVEN BY VISION
@@ -83,7 +107,6 @@ const About = () => {
       </section>
 
       <Metrics />
-
 
       {/* Clients */}
       <section className="section-padding">
@@ -104,8 +127,11 @@ const About = () => {
                 transition={{ duration: 0.4, delay: i * 0.05 }}
                 className=" py-5 px-3 flex items-center justify-center max-md:py-2 max-md:px-2"
               >
-                <img src={client} alt="Behind the scenes" className="w-full h-40  rounded-lg" />
-
+                <img
+                  src={client}
+                  alt="Behind the scenes"
+                  className="w-full h-40  rounded-lg"
+                />
               </motion.div>
             ))}
           </div>
@@ -122,7 +148,11 @@ const About = () => {
             transition={{ duration: 0.7 }}
           >
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={project1} alt="Behind the scenes" className="w-full h-full object-cover" />
+              <img
+                src={project1}
+                alt="Behind the scenes"
+                className="w-full h-full object-cover"
+              />
               <div className="absolute inset-0 border border-primary/20" />
             </div>
           </motion.div>
@@ -135,26 +165,29 @@ const About = () => {
             <SectionHeading label="Our Story" title="WHO WE ARE?" />
             <div className="space-y-4 text-muted-foreground text-sm md:text-base leading-relaxed">
               <p>
-                ENS Media is a full-service media production company based in Los Angeles.
-                We specialize in creating cinematic content that moves audiences — from brand campaigns
-                and documentaries to live broadcasts and corporate media.
+                ENS Media is a full-service media production company based in
+                Los Angeles. We specialize in creating cinematic content that
+                moves audiences — from brand campaigns and documentaries to live
+                broadcasts and corporate media.
               </p>
               <p>
-                Our approach is rooted in collaboration, creative integrity, and technical excellence.
-                Every project begins with understanding the story our clients want to tell, and we bring
-                the expertise, equipment, and artistry to bring that story to life.
+                Our approach is rooted in collaboration, creative integrity, and
+                technical excellence. Every project begins with understanding
+                the story our clients want to tell, and we bring the expertise,
+                equipment, and artistry to bring that story to life.
               </p>
               <p>
-                With a team of experienced producers, directors, cinematographers, and editors,
-                we deliver broadcast-quality content that meets the highest industry standards.
+                With a team of experienced producers, directors,
+                cinematographers, and editors, we deliver broadcast-quality
+                content that meets the highest industry standards.
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-            {/* Services */}
-            <section className="section-padding bg-secondary/30">
+      {/* Services */}
+      <section className="section-padding bg-secondary/30">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             label="What We Do"

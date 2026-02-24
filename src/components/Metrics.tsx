@@ -29,7 +29,7 @@ export default function Metrics() {
         </div>
         <div className="flex justify-evenly max-md:flex-wrap max-md:gap-5 mt-20 w-full">
           {ratesDetails.map((rate, i) => (
-            <div className="bg-white p-6 rounded-lg border" key={i}>
+            <div className="bg-white  rounded-lg border w-60 h-32 grid place-content-center" key={i}>
               <h3 className="text-center text-4xl font-bold ">
                 {rate.metrics}
               </h3>

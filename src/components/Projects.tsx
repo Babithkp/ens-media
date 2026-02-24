@@ -1,4 +1,5 @@
-import Autoplay from "embla-carousel-autoplay";import {
+import Autoplay from "embla-carousel-autoplay";
+import {
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -142,7 +143,7 @@ const brands = [
   "large-scale shows",
   "smartphone launches",
   "corporate events",
-  "IIT Kharagur"
+  "IIT Kharagur",
 ];
 
 const highlightsbrands = (text: string) => {
@@ -157,10 +158,7 @@ const highlightsbrands = (text: string) => {
 
     if (matchedBrand) {
       return (
-        <span
-          key={index}
-          className=" font-semibold text-[#F77325] uppercase"
-        >
+        <span key={index} className=" font-semibold text-[#F77325] uppercase">
           {part}
         </span>
       );
@@ -171,9 +169,9 @@ const highlightsbrands = (text: string) => {
 };
 export default function Projects() {
   return (
-    <section className="section-padding max-w-7xl mx-auto">
+    <section className="section-padding max-w-7xl mx-auto ">
       <SectionHeading label="Featured Work" title="SELECTED PROJECTS" />
-      <div className="grid grid-cols-1  lg:grid-cols-2 gap-4 max-md:gap-20 max-md:mt-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-md:mt-4">
         {projects.map((project, i) => (
           <motion.div
             key={project.title}
@@ -181,20 +179,9 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: i * 0.1 }}
-            className="group  aspect-square  cursor-pointer"
+            className="group cursor-pointer rounded-2xl overflow-hidden bg-card"
           >
-            
-            <div className=" inset-0 bg-background/70  duration-500 flex flex-col justify-end py-6 gap-2 h-32">
-              <span className="font-display text-2xl text-foreground mt-1">
-                {project.title}
-              </span>
-              <span className="text-xs ">
-                {highlightsbrands(
-                  project.description)}
-              </span>
-            </div>
             <Carousel
-              className="w-full max-w-xl mx-auto"
               opts={{ loop: true }}
               plugins={[
                 Autoplay({
@@ -206,18 +193,26 @@ export default function Projects() {
               <CarouselContent>
                 {project.images.map((src, index) => (
                   <CarouselItem key={index}>
-                    <>
-                      <img
-                        src={src.img}
-                        alt={`Slide ${index + 1}`}
-                        className=" w-full h-80 object-cover"
-                      />
-                      <p className="capitalize">{src.title}</p>
-                    </>
+                    <img
+                      src={src.img}
+                      alt={src.title}
+                      className="w-full h-[320px] object-cover"
+                    />
+                    <p className="capitalize text-sm">{src.title}</p>
                   </CarouselItem>
                 ))}
               </CarouselContent>
             </Carousel>
+
+            <div className="p-5 flex flex-col gap-2">
+              <span className="font-display text-2xl text-foreground">
+                {project.title}
+              </span>
+
+              <span className="text-xs text-muted-foreground">
+                {highlightsbrands(project.description)}
+              </span>
+            </div>
           </motion.div>
         ))}
       </div>
