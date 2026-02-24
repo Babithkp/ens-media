@@ -27,6 +27,7 @@ import iitkharagpur from "@/assets/iit-kharagpur.png"
 import nitcalicut from "@/assets/iit-calicut.webp"
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
+import Metrics from "@/components/Metrics";
 
 const services = [
   {
@@ -80,6 +81,8 @@ const About = () => {
           </motion.div>
         </div>
       </section>
+
+      <Metrics />
 
 
       {/* Clients */}

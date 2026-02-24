@@ -13,6 +13,7 @@ import Footer from "@/components/Footer";
 import { toast } from "sonner";
 import instalogo from "@/assets/Instagram_logo.webp";
 import whatsapp from "@/assets/whatsapp.png";
+import Metrics from "@/components/Metrics";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -79,7 +80,10 @@ const Contact = () => {
           </motion.div>
         </div>
       </section>
-      <section className="flex justify-center items-center gap-10 max-md:justify-evenly px-8">
+
+      <Metrics />
+
+      <section className="flex justify-center items-center gap-10 max-md:justify-evenly px-8 mt-20">
         <a href="https://www.instagram.com/ens.productionss?igsh=MWJ0Z3NxZWN0YjRrbQ==" className="flex items-center gap-3 max-md:w-1/2" target="_blank">
           <img
             src={instalogo}

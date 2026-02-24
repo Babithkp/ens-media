@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ArrowRight, DotIcon } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -30,6 +31,7 @@ import iitkharagpur from "@/assets/iit-kharagpur.png";
 import nitcalicut from "@/assets/iit-calicut.webp";
 
 import Projects from "@/components/Projects";
+import Metrics from "@/components/Metrics";
 
 const clients = [
   entity,
@@ -72,21 +74,6 @@ const services = [
     title: "Campus Tours & Brand Activations",
     desc: "We execute nationwide campus tours and immersive brand activations that drive on-ground engagement. Our collaborations include Krafton, PlayStation, Riot Games, and Smaaash across institutions such as IITs, NITs, and NSUT.",
     img: project3,
-  },
-];
-
-const ratesDetails = [
-  {
-    title: "Successful projects",
-    metrics: "250+",
-  },
-  {
-    title: "Satisfied Brands",
-    metrics: "50+",
-  },
-  {
-    title: "Different domains",
-    metrics: "10+",
   },
 ];
 
@@ -142,28 +129,10 @@ const Index = () => {
       </section>
 
       <section className="w-full flex justify-center ">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-        >
-          <p className="text-5xl font-medium font-display bg-gradient-to-r from-[#3C248E] via-[#F77325] to-[#30C0E5] bg-clip-text text-transparent max-md:text-center">
-            Broadcasting Excellence & Producing Impact.
-          </p>
-        </motion.div>
+        
       </section>
-      <section className="  w-full flex justify-center mt-20">
-        <div className="flex justify-evenly w-[90%] max-md:flex-wrap max-md:gap-5">
-          {ratesDetails.map((rate, i) => (
-            <div className="" key={i}>
-              <h3 className="text-center text-4xl font-bold ">
-                {rate.metrics}
-              </h3>
-              <p className="text-center text-lg">{rate.title}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+
+      <Metrics />
 
       {/* Clients */}
       <section className="section-padding ">

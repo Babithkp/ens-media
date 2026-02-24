@@ -184,7 +184,7 @@ export default function Projects() {
             className="group  aspect-square  cursor-pointer"
           >
             
-            <div className=" inset-0 bg-background/70  duration-500 flex flex-col justify-end py-6 gap-2">
+            <div className=" inset-0 bg-background/70  duration-500 flex flex-col justify-end py-6 gap-2 h-32">
               <span className="font-display text-2xl text-foreground mt-1">
                 {project.title}
               </span>
