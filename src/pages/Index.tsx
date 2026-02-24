@@ -1,8 +1,6 @@
-import { motion } from "framer-motion";import { Link } from "react-router-dom";
-import {
-  ArrowRight,
-  DotIcon,
-} from "lucide-react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight, DotIcon } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionHeading from "@/components/SectionHeading";
@@ -28,10 +26,11 @@ import acer from "@/assets/Acer.jpg";
 import lenovo from "@/assets/Lenovo.png";
 import comic_con from "@/assets/comic_con.jpg";
 import amd from "@/assets/amd.webp";
-import iitdelhi from "@/assets/iit-delhi.png"
-import iitkharagpur from "@/assets/iit-kharagpur.png"
-import nitcalicut from "@/assets/iit-calicut.webp"
+import iitdelhi from "@/assets/iit-delhi.png";
+import iitkharagpur from "@/assets/iit-kharagpur.png";
+import nitcalicut from "@/assets/iit-calicut.webp";
 
+import Projects from "@/components/Projects";
 
 const clients = [
   entity,
@@ -51,57 +50,44 @@ const clients = [
   amd,
   iitdelhi,
   iitkharagpur,
-  nitcalicut
-];
-
-const projects = [
-  {
-    img: project1,
-    title: "Campus Tours & Brand Activations",
-    client: "Lenovo · Krafton (BGMI) · PlayStation · Garena (Free Fire)",
-    description:
-      "We design and execute high-impact college campus tours and on-ground brand activations, creating immersive gaming and engagement experiences that connect brands directly with young audiences.",
-  },
-  {
-    img: project2,
-    title: "Production & Live Broadcasting",
-    client: "OnePlus · iQOO · Samsung",
-    description:
-      "We deliver end-to-end production and live broadcasting for esports, LAN and similar events, managing everything from pre-event planning and technical setup to multi-camera production and real-time streaming. Our team ensures seamless execution, broadcast-quality visuals, and reliable live streams across digital platforms.",
-  },
-  {
-    img: project3,
-    title: "Casting & Live Commentary",
-    client: "Acer · Samsung · Alienware · Intel · Flipkart · Entity",
-    description:
-      "We provide professional casting and live commentary for esports tournaments, product launch and branded streams, delivering energetic storytelling, in-depth gameplay analysis, and real-time audience engagement that elevates the viewing experience.",
-  },
+  nitcalicut,
 ];
 
 const services = [
   {
     title: "Casting",
     desc: "We provide professional esports casting for gaming streams, tournaments, and live events, delivering high-energy commentary that enhances gameplay, engages viewers, and elevates the broadcast experience.",
+    img: project2,
   },
   {
     title: "Emcee Services",
     desc: "Our professional emcees host and anchor events with energy, clarity, and audience engagement, elevating brand presence across live shows, launches, and activations.",
+    img: project3,
   },
   {
     title: "Production",
     desc: "We handle complete media production, from concept and planning to execution, delivering high-quality visual content tailored for digital, broadcast, and on-ground platforms.",
+    img: project1,
   },
   {
     title: "Broadcasting",
     desc: "We specialize in live and recorded broadcasting, covering events with seamless production, real-time streaming, and technical precision across multiple platforms.",
+    img: project3,
+  },
+];
+
+const ratesDetails = [
+  {
+    title: "Yearly in Design",
+    metrics: "20+",
   },
   {
-    title: "Campus Tours & Brand Activations",
-    desc: "We design and execute college campus tours and on-ground activations for brands, creating immersive experiences that drive awareness, engagement, and recall among young audiences.",
+    title: "Satisfied",
+    metrics: "200+",
   },
   {
-    title: "Social Media Marketing",
-    desc: "We build and manage data-driven social media strategies, producing content that increases visibility, engagement, and brand growth across all major platforms.",
+    title: "Successful Projects",
+    metrics: "500+",
   },
 ];
 
@@ -155,6 +141,29 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+      <section className="w-full flex justify-center ">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          <p className="text-5xl font-medium font-display max-md:text-center" >
+            <span className="text-[#3C248E]">Broadcasting Excellence</span>{" "}
+            <span className="text-[#F77325]">&</span>{" "}
+            <span className="text-[#30C0E5]">Producing Impact.</span>
+          </p>
+        </motion.div>
+      </section>
+      <section className="  w-full flex justify-center mt-20">
+        <div className="flex justify-evenly w-[90%] max-md:flex-wrap max-md:gap-5">
+          {ratesDetails.map((rate, i) => (
+            <div className="" key={i}>
+              <h3 className="text-center text-4xl font-bold ">{rate.metrics}</h3>
+              <p className="text-center text-lg">{rate.title}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Clients */}
       <section className="section-padding ">
@@ -187,34 +196,7 @@ const Index = () => {
       </section>
 
       {/* Featured Work */}
-      <section className="section-padding max-w-7xl mx-auto">
-        <SectionHeading label="Featured Work" title="SELECTED PROJECTS" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-md:mt-5">
-          {projects.map((project, i) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group  aspect-square  cursor-pointer"
-            >
-              <img
-                src={project.img}
-                alt={project.title}
-                className="w-full h-full object-cover"
-              />
-              <div className=" inset-0 bg-background/70  duration-500 flex flex-col justify-end py-6 gap-2">
-                <span className="font-display text-2xl text-foreground mt-1">
-                  {project.title}
-                </span>
-                <span className="text-xs ">{project.description}</span>
-                <span className="text-xs text-primary">{project.client}</span>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      <Projects />
 
       {/* About Snippet */}
       <section className="section-padding max-w-7xl mx-auto">
@@ -270,14 +252,27 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="glass-card p-8 text-center group hover:border-primary/30 transition-colors duration-500"
+                className="glass-card p-8 text-center group relative overflow-hidden hover:border-primary/30 transition-colors duration-500 rounded-2xl"
               >
-                <h3 className="font-display text-xl text-foreground mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {service.desc}
-                </p>
+                {/* Background Image */}
+                <img
+                  src={service.img}
+                  alt={service.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+
+                {/* Optional Dark Overlay */}
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-500" />
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <h3 className="font-display text-xl text-white mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    {service.desc}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>

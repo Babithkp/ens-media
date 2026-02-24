@@ -1,17 +1,54 @@
-import { useState } from "react";import { motion } from "framer-motion";
-import { Send, MapPin, Mail, Phone, Instagram } from "lucide-react";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Send,
+  MapPin,
+  Mail,
+  Phone,
+  Instagram,
+  LoaderCircle,
+} from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { toast } from "sonner";
 import instalogo from "@/assets/Instagram_logo.webp";
+import whatsapp from "@/assets/whatsapp.png";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! We'll be in touch soon.");
-    setForm({ name: "", email: "", message: "" });
+    const formDataWithKey = {
+      ...form,
+      access_key: "c70ae29d-0e7a-4698-a790-f8189613bf96",
+    };
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formDataWithKey),
+      });
+
+      if (response.ok) {
+        setForm({ name: "", email: "", message: "" });
+        toast.success(
+          "Thanks for contacting us! We will get back to you shortly.",
+        );
+      }
+    } catch (error) {
+      toast.error(
+        "Something went wrong. Please check your internet connection.",
+        error.message,
+      );
+    }
+    setIsLoading(false);
   };
 
   return (
@@ -44,9 +81,6 @@ const Contact = () => {
       </section>
 
       <section className="section-padding pt-0">
-        <div>
-          <Instagram className="text-primary mt-1 shrink-0" size={50} />
-        </div>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Form */}
           <motion.form
@@ -98,9 +132,16 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="inline-flex items-center gap-3 font-body text-sm tracking-widest uppercase px-8 py-4 bg-primary text-primary-foreground hover:opacity-90 transition-opacity rounded-lg"
+              className="inline-flex items-center gap-3 font-body text-sm tracking-widest uppercase px-4 py-3 bg-primary text-primary-foreground hover:opacity-90 transition-opacity rounded-lg"
+              disabled={isLoading}
             >
-              Send Message <Send size={16} />
+              {!isLoading ? (
+                <>
+                  Send Message <Send size={16} />
+                </>
+              ) : (
+                <LoaderCircle size={20} className="animate-spin" />
+              )}
             </button>
           </motion.form>
 
@@ -117,15 +158,34 @@ const Contact = () => {
                 CONTACT INFO
               </h3>
               <div className="space-y-6">
+              <a href="/" className="flex items-center gap-3">
+              <img
+                src={instalogo}
+                alt="Instagram"
+                className="size-10 object-cover"
+              />
+              <p className="font-medium">DM us on Instagram</p>
+            </a>
+            <a href="/" className="flex items-center gap-3">
+              <img
+                src={whatsapp}
+                alt="Whatsapp"
+                className="size-10 object-cover rounded-2xl"
+                />
+                <p className="font-medium">Message in Whatsapp</p>
+            </a>
                 <div className="flex items-start gap-4">
                   <Mail className="text-primary mt-1 shrink-0" size={18} />
                   <div>
                     <span className="text-xs tracking-widest uppercase text-muted-foreground block mb-1">
                       Email
                     </span>
-                    <span className="text-foreground text-sm">
-                      hello@ensmedia.studio
-                    </span>
+                    <a
+                      href="mailto:contact@ensproductions.com"
+                      className="text-foreground text-sm"
+                    >
+                      contact@ensproductions.com
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -135,7 +195,7 @@ const Contact = () => {
                       Phone
                     </span>
                     <span className="text-foreground text-sm">
-                      +1 (555) 234-5678
+                      +91 81029 84360
                     </span>
                   </div>
                 </div>
@@ -146,9 +206,7 @@ const Contact = () => {
                       Location
                     </span>
                     <span className="text-foreground text-sm">
-                      1234 Sunset Blvd, Suite 500
-                      <br />
-                      Los Angeles, CA 90028
+                      Bangalore, India
                     </span>
                   </div>
                 </div>
