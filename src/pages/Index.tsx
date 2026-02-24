@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";import { Link } from "react-router-dom";
 import { ArrowRight, DotIcon } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -34,44 +33,44 @@ import Projects from "@/components/Projects";
 
 const clients = [
   entity,
-  garena,
   intel,
-  alienware,
+  garena,
   krafton,
-  samsung,
+  iitkharagpur,
+  iitdelhi,
   oneplus,
   riot,
+  alienware,
   iqoo,
-  flipkart,
   playstation,
+  samsung,
   acer,
+  flipkart,
+  nitcalicut,
   lenovo,
   comic_con,
   amd,
-  iitdelhi,
-  iitkharagpur,
-  nitcalicut,
 ];
 
 const services = [
   {
-    title: "Casting",
-    desc: "We provide professional esports casting for gaming streams, tournaments, and live events, delivering high-energy commentary that enhances gameplay, engages viewers, and elevates the broadcast experience.",
+    title: "Live Production",
+    desc: "We deliver end-to-end live production for concerts, large-scale shows, smartphone launches, and corporate events. Our portfolio includes production support for smartphone launch events by iQOO and Samsung, ensuring seamless execution, technical precision, and impactful audience experiences.",
     img: project2,
   },
   {
-    title: "Emcee Services",
-    desc: "Our professional emcees host and anchor events with energy, clarity, and audience engagement, elevating brand presence across live shows, launches, and activations.",
+    title: "Live Broadcasting",
+    desc: "We provide high-definition, real-time live broadcasting across digital platforms for sports, eSports, and institutional productions. Our brand partnerships include Intel, Flipkart, Lenovo, AMD, and Entity, with event coverage for Acer Predator League, iQOO India League, PUBG Mobile tournaments, cricket broadcasts, and productions at IIT Delhi and NIT Calicut.",
     img: project3,
   },
   {
-    title: "Production",
-    desc: "We handle complete media production, from concept and planning to execution, delivering high-quality visual content tailored for digital, broadcast, and on-ground platforms.",
+    title: "Emcee / Host Services",
+    desc: "We offer professional emcee and hosting services with commanding stage presence and strong audience engagement. We have worked with PlayStation and Lenovo, hosting major events including Comic Con India and large-scale brand launches.",
     img: project1,
   },
   {
-    title: "Broadcasting",
-    desc: "We specialize in live and recorded broadcasting, covering events with seamless production, real-time streaming, and technical precision across multiple platforms.",
+    title: "Campus Tours & Brand Activations",
+    desc: "We execute nationwide campus tours and immersive brand activations that drive on-ground engagement. Our collaborations include Krafton, PlayStation, Riot Games, and Smaaash across institutions such as IITs, NITs, and NSUT.",
     img: project3,
   },
 ];

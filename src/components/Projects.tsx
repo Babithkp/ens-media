@@ -1,5 +1,4 @@
-import Autoplay from "embla-carousel-autoplay";
-import {
+import Autoplay from "embla-carousel-autoplay";import {
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -52,18 +51,15 @@ const projects = [
     img: project1,
     title: "Live Production",
     description:
-      "We deliver end-to-end live production for concerts, large-scale shows, smartphone launches, and corporate events. Our portfolio includes production support for smartphone launch events by iQOO and Samsung, ensuring seamless execution, technical precision, and impactful audience experiences.",
+      "We deliver end-to-end live production for concerts, large-scale shows, smartphone launches, and corporate events. Our portfolio includes production support for smartphone launch events by iQOO, Lenovo Tech world 2026 and Samsung, ensuring seamless execution, technical precision, and impactful audience experiences.",
     images: [
-      { img: p1, title: "P1" },
-      { img: p2, title: "P2" },
-      { img: p3, title: "P3" },
-      { img: p4, title: "P4" },
-      { img: pb1, title: "PB1" },
-      { img: pb2, title: "PB2" },
-      { img: pb3, title: "PB3" },
-      { img: pb4, title: "PB4" },
-      { img: pb5, title: "PB5" },
-      { img: pb6, title: "PB6" },
+      { img: p1, title: "Music Concert" },
+      { img: p2, title: "DJ Concert" },
+      { img: p3, title: "Acer Predator League Studio Production" },
+      { img: p4, title: "IQOO India League" },
+      { img: pb1, title: "Lenovo Tech world" },
+      { img: pb2, title: "Cricket Auction" },
+      { img: pb3, title: "ESports Event" },
     ],
   },
   {
@@ -71,21 +67,21 @@ const projects = [
     title: "Live Broadcasting",
     description:
       "We provide high-definition, real-time live broadcasting across digital platforms for sports, eSports, and institutional productions. Our brand partnerships include Intel, Flipkart, Lenovo, AMD, and Entity, with event coverage for Acer Predator League, iQOO India League, PUBG Mobile tournaments, cricket broadcasts, and productions at IIT Delhi and NIT Calicut.",
-      images: [
-        { img: b1, title: "B1" },
-        { img: b2, title: "B2" },
-        { img: b3, title: "B3" },
-        { img: b4, title: "B4" },
-        { img: b5, title: "B5" },
-        { img: b6, title: "B6" },
-        { img: b7, title: "B7" },
-        { img: b8, title: "B8" },
-        { img: b9, title: "B9" },
-        { img: b10, title: "B10" },
-        { img: b11, title: "B11" },
-        { img: b12, title: "B12" },
-        { img: b13, title: "B13" },
-      ],
+    images: [
+      { img: b2, title: "WCG" },
+      { img: b3, title: "Pubg Mobile global championship" },
+      { img: b4, title: "University LAN championship" },
+      { img: b5, title: "ESports Event Broadcast" },
+      { img: b7, title: "Cricket League Broadcast" },
+      { img: b8, title: "Samsung Play Galaxy cup" },
+      { img: b9, title: "Maharashtra ESports LAN event" },
+      { img: b10, title: "Maharashtra ESports open championship" },
+      { img: b11, title: "Flipkart event" },
+      { img: b12, title: "Esports BGMI event" },
+      { img: b13, title: "AMD Hackthon IIT Dehli" },
+      { img: pb5, title: "Collegiate LAN" },
+      { img: pb6, title: "University Championship NIT Calicut" },
+    ],
   },
   {
     img: project3,
@@ -93,9 +89,8 @@ const projects = [
     description:
       "We offer professional emcee and hosting services with commanding stage presence and strong audience engagement. We have worked with PlayStation and Lenovo, hosting major events including Comic Con India and large-scale brand launches.",
     images: [
-      { img: h1, title: "H1" },
-      { img: h2, title: "H2" },
-      { img: h3, title: "H3" },
+      { img: h2, title: "University event MIT WPU" },
+      { img: h3, title: "Free Fire domain expansion" },
     ],
   },
   {
@@ -104,20 +99,20 @@ const projects = [
     description:
       "We execute nationwide campus tours and immersive brand activations that drive on-ground engagement. Our collaborations include Krafton, PlayStation, Riot Games, and Smaaash across institutions such as IITs, NITs, and NSUT.",
     images: [
-      { img: c1, title: "C1" },
-      { img: c2, title: "c2" },
-      { img: c3, title: "c3" },
-      { img: c4, title: "c4" },
-      { img: c5, title: "c5" },
-      { img: c6, title: "c6" },
+      { img: c1, title: "Krafton campus tour NIT" },
+      { img: c2, title: "Lenovo yoga" },
+      { img: c3, title: "Krafton campus tour Bangalore in 10+ colleges" },
+      { img: c4, title: "playStation league in 20+ colleges" },
+      { img: c5, title: "playStation league" },
+      { img: c6, title: "Krafton campus tour" },
     ],
   },
 ];
 
-
 const brands = [
   "Intel",
   "Flipkart",
+  "Lenovo Tech world 2026",
   "Lenovo",
   "AMD",
   "Acer Predator League",
@@ -137,16 +132,19 @@ const brands = [
   "NSUT",
   "tournaments",
   "cricket broadcasts",
-  "production support",
   "emcee and hosting services",
   "Comic Con India",
   "social media marketing",
   "digital campaign management",
   "content creation",
   "Entity",
+  "concerts",
+  "large-scale shows",
+  "smartphone launches",
+  "corporate events",
 ];
 
-const highlightsbrands = (text: string, color: string) => {
+const highlightsbrands = (text: string) => {
   const regex = new RegExp(`\\b(${brands.join("|")})\\b`, "gi");
 
   const parts = text.split(regex);
@@ -160,10 +158,7 @@ const highlightsbrands = (text: string, color: string) => {
       return (
         <span
           key={index}
-          className=" font-semibold"
-          style={{
-            color: color,
-          }}
+          className=" font-semibold text-[#F77325]"
         >
           {part}
         </span>
@@ -177,7 +172,7 @@ export default function Projects() {
   return (
     <section className="section-padding max-w-7xl mx-auto">
       <SectionHeading label="Featured Work" title="SELECTED PROJECTS" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-md:mt-5">
+      <div className="grid grid-cols-1  lg:grid-cols-2 gap-4 max-md:mt-5">
         {projects.map((project, i) => (
           <motion.div
             key={project.title}
@@ -218,13 +213,7 @@ export default function Projects() {
               </span>
               <span className="text-xs ">
                 {highlightsbrands(
-                  project.description,
-                  i == 0 || i == 1
-                    ? "#3C248E"
-                    : i == 4 || i == 3
-                      ? "#30C0E5"
-                      : "#F77325",
-                )}
+                  project.description)}
               </span>
             </div>
           </motion.div>
