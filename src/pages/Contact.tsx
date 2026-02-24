@@ -80,7 +80,7 @@ const Contact = () => {
         </div>
       </section>
       <section className="flex justify-center items-center gap-10 max-md:justify-evenly px-8">
-        <a href="/" className="flex items-center gap-3 max-md:w-1/2">
+        <a href="https://www.instagram.com/ens.productionss?igsh=MWJ0Z3NxZWN0YjRrbQ==" className="flex items-center gap-3 max-md:w-1/2" target="_blank">
           <img
             src={instalogo}
             alt="Instagram"
@@ -88,7 +88,7 @@ const Contact = () => {
           />
           <p className="font-medium">DM us on Instagram</p>
         </a>
-        <a href="/" className="flex items-center gap-3 max-md:w-1/2">
+        <a href="https://wa.me/918102984360" className="flex items-center gap-3 max-md:w-1/2" target="_blank">
           <img
             src={whatsapp}
             alt="Whatsapp"

@@ -77,16 +77,16 @@ const services = [
 
 const ratesDetails = [
   {
-    title: "Yearly in Design",
-    metrics: "20+",
+    title: "Successful projects",
+    metrics: "250+",
   },
   {
-    title: "Satisfied",
-    metrics: "200+",
+    title: "Satisfied Brands",
+    metrics: "50+",
   },
   {
-    title: "Successful Projects",
-    metrics: "500+",
+    title: "Different domains",
+    metrics: "10+",
   },
 ];
 

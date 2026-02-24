@@ -66,7 +66,7 @@ const projects = [
     img: project2,
     title: "Live Broadcasting",
     description:
-      "We provide high-definition, real-time live broadcasting across digital platforms for sports, eSports, and institutional productions. Our brand partnerships include Intel, Flipkart, Lenovo, AMD, and Entity, with event coverage for Acer Predator League, iQOO India League, PUBG Mobile tournaments, cricket broadcasts, and productions at IIT Delhi and NIT Calicut.",
+      "We provide high-definition, real-time live broadcasting across digital platforms for sports, eSports, and institutional productions. Our brand partnerships include Intel, Flipkart, Lenovo, AMD, and Entity, with event coverage for Acer Predator League, iQOO India League, PUBG Mobile tournaments, cricket broadcasts, Corporate events and productions at IIT Delhi, IIT Kharagur and NIT Calicut.",
     images: [
       { img: b2, title: "WCG" },
       { img: b3, title: "Pubg Mobile global championship" },
@@ -78,7 +78,7 @@ const projects = [
       { img: b10, title: "Maharashtra ESports open championship" },
       { img: b11, title: "Flipkart event" },
       { img: b12, title: "Esports BGMI event" },
-      { img: b13, title: "AMD Hackthon IIT Dehli" },
+      { img: b13, title: "AMD Hackathon IIT Dehli" },
       { img: pb5, title: "Collegiate LAN" },
       { img: pb6, title: "University Championship NIT Calicut" },
     ],
@@ -97,7 +97,7 @@ const projects = [
     img: project3,
     title: "Campus Tours & Brand Activations",
     description:
-      "We execute nationwide campus tours and immersive brand activations that drive on-ground engagement. Our collaborations include Krafton, PlayStation, Riot Games, and Smaaash across institutions such as IITs, NITs, and NSUT.",
+      "We execute nationwide campus tours and immersive brand activations that drive on-ground engagement. Our collaborations include Krafton, PlayStation, Riot Games, and Esmaaash across institutions such as IITs and NITs.",
     images: [
       { img: c1, title: "Krafton campus tour NIT" },
       { img: c2, title: "Lenovo yoga" },
@@ -124,7 +124,7 @@ const brands = [
   "Samsung",
   "OnePlus",
   "Riot Games",
-  "Smaaash",
+  "Esmaaash",
   "PlayStation",
   "Krafton",
   "IITs",
@@ -142,6 +142,7 @@ const brands = [
   "large-scale shows",
   "smartphone launches",
   "corporate events",
+  "IIT Kharagur"
 ];
 
 const highlightsbrands = (text: string) => {
@@ -158,7 +159,7 @@ const highlightsbrands = (text: string) => {
       return (
         <span
           key={index}
-          className=" font-semibold text-[#F77325]"
+          className=" font-semibold text-[#F77325] uppercase"
         >
           {part}
         </span>
@@ -197,7 +198,7 @@ export default function Projects() {
               opts={{ loop: true }}
               plugins={[
                 Autoplay({
-                  delay: 5000,
+                  delay: 3000,
                   stopOnInteraction: false,
                 }),
               ]}
@@ -211,7 +212,7 @@ export default function Projects() {
                         alt={`Slide ${index + 1}`}
                         className=" w-full h-80 object-cover"
                       />
-                      <p>{src.title}</p>
+                      <p className="capitalize">{src.title}</p>
                     </>
                   </CarouselItem>
                 ))}

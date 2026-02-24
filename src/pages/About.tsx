@@ -25,25 +25,32 @@ import amd from "@/assets/amd.webp";
 import iitdelhi from "@/assets/iit-delhi.png"
 import iitkharagpur from "@/assets/iit-kharagpur.png"
 import nitcalicut from "@/assets/iit-calicut.webp"
-
+import project2 from "@/assets/project-2.jpg";
+import project3 from "@/assets/project-3.jpg";
 
 const services = [
-  { title: "Casting", desc: "We provide professional esports casting for gaming streams, tournaments, and live events, delivering high-energy commentary that enhances gameplay, engages viewers, and elevates the broadcast experience." },
-  { title: "Emcee Services", desc: "Our professional emcees host and anchor events with energy, clarity, and audience engagement, elevating brand presence across live shows, launches, and activations." },
-  { title: "Production", desc: "We handle complete media production, from concept and planning to execution, delivering high-quality visual content tailored for digital, broadcast, and on-ground platforms." },
-  { title: "Broadcasting", desc: "We specialize in live and recorded broadcasting, covering events with seamless production, real-time streaming, and technical precision across multiple platforms." },
-  { title: "Campus Tours & Brand Activations", desc: "We design and execute college campus tours and on-ground activations for brands, creating immersive experiences that drive awareness, engagement, and recall among young audiences." },
-  { title: "Social Media Marketing", desc: "We build and manage data-driven social media strategies, producing content that increases visibility, engagement, and brand growth across all major platforms." },
+  {
+    title: "Live Production",
+    desc: "We deliver end-to-end live production for concerts, large-scale shows, smartphone launches, and corporate events. Our portfolio includes production support for smartphone launch events by iQOO and Samsung, ensuring seamless execution, technical precision, and impactful audience experiences.",
+    img: project2,
+  },
+  {
+    title: "Live Broadcasting",
+    desc: "We provide high-definition, real-time live broadcasting across digital platforms for sports, eSports, and institutional productions. Our brand partnerships include Intel, Flipkart, Lenovo, AMD, and Entity, with event coverage for Acer Predator League, iQOO India League, PUBG Mobile tournaments, cricket broadcasts, and productions at IIT Delhi and NIT Calicut.",
+    img: project3,
+  },
+  {
+    title: "Emcee / Host Services",
+    desc: "We offer professional emcee and hosting services with commanding stage presence and strong audience engagement. We have worked with PlayStation and Lenovo, hosting major events including Comic Con India and large-scale brand launches.",
+    img: project1,
+  },
+  {
+    title: "Campus Tours & Brand Activations",
+    desc: "We execute nationwide campus tours and immersive brand activations that drive on-ground engagement. Our collaborations include Krafton, PlayStation, Riot Games, and Smaaash across institutions such as IITs, NITs, and NSUT.",
+    img: project3,
+  },
 ];
 
-const capabilities = [
-  { icon: Film, title: "Video Production", desc: "End-to-end film and video production, from scripting and storyboarding to on-set direction and final delivery." },
-  { icon: Radio, title: "Live Broadcasting", desc: "Multi-camera live streaming and broadcast solutions for events, conferences, and real-time programming." },
-  { icon: Tv, title: "Post-Production", desc: "Professional editing, color grading, sound design, VFX compositing, and finishing for broadcast and digital." },
-  { icon: Camera, title: "Event Coverage", desc: "Comprehensive event documentation with cinematic quality — from intimate gatherings to large-scale productions." },
-  { icon: Clapperboard, title: "Commercials & Ads", desc: "High-impact commercial production for brands seeking memorable, visually striking advertising content." },
-  { icon: Palette, title: "Creative Direction", desc: "Strategic creative oversight ensuring every project aligns with brand vision and audience expectations." },
-];
 
 const clients = [
   entity, garena, intel, alienware, krafton, samsung, oneplus, riot, iqoo, flipkart, playstation, acer, lenovo,comic_con,amd,iitdelhi,iitkharagpur,nitcalicut
@@ -143,10 +150,15 @@ const About = () => {
         </div>
       </section>
 
-      <section className="section-padding bg-secondary/30">
+            {/* Services */}
+            <section className="section-padding bg-secondary/30">
         <div className="max-w-7xl mx-auto">
-          <SectionHeading label="What We Do" title="OUR SERVICES" align="center" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <SectionHeading
+            label="What We Do"
+            title="OUR SERVICES"
+            align="center"
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-md:mt-5">
             {services.map((service, i) => (
               <motion.div
                 key={service.title}
@@ -154,10 +166,27 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="glass-card p-8 text-center group hover:border-primary/30 transition-colors duration-500"
+                className="glass-card p-8 text-center group relative overflow-hidden hover:border-primary/30 transition-colors duration-500 rounded-2xl"
               >
-                <h3 className="font-display text-xl text-foreground mb-2">{service.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
+                {/* Background Image */}
+                <img
+                  src={service.img}
+                  alt={service.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+
+                {/* Optional Dark Overlay */}
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-500" />
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <h3 className="font-display text-xl text-white mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    {service.desc}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
